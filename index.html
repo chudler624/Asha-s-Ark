@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asha's Ark: building futures through education</title>
+<meta name="description" content="Asha's Ark raises money so children in India whose families cannot afford school supplies, uniforms, or fees can go to school.">
+<link rel="canonical" href="https://ashasark.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Asha's Ark: building futures through education">
+<meta property="og:description" content="A charity helping children in India go to school.">
+<meta property="og:url" content="https://ashasark.com/">
+<meta property="og:image" content="https://ashasark.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FAFAF4">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script>
+/* Runs before the engine. Decides the motion mode once, and lets the on-page
+   "Reduce motion" switch behave exactly like the OS setting. */
+(function () {
+  var h = document.documentElement, stored = false;
+  try { stored = localStorage.getItem('ashaMotion') === 'reduce'; } catch (e) {}
+  var os = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce = os || stored;
+  if (stored) {
+    h.setAttribute('data-motion', 'reduce');
+    var real = window.matchMedia.bind(window);
+    window.matchMedia = function (q) {
+      if (/prefers-reduced-motion:\s*reduce/.test(q)) {
+        return { matches: true, media: q, onchange: null, addEventListener: function () {}, removeEventListener: function () {}, addListener: function () {}, removeListener: function () {}, dispatchEvent: function () { return false; } };
+      }
+      return real(q);
+    };
+  }
+  if (reduce) h.classList.add('is-reduce');
+  if (reduce || innerWidth <= 860 || innerHeight < 680 || (innerWidth < 1200 && innerHeight < 780)) h.classList.add('is-static');
+})();
+</script>
+<link rel="stylesheet" href="scrollcraft.css">
+<link rel="stylesheet" href="site.css">
+<noscript><style>.mark,.mark-base{display:none}[data-sc-in],[data-sc-stagger]>*,[data-sc-cue]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- The logo, built from named groups so scroll can draw it. Variables set on
+     the element that uses it (--draw, --fill, --b1..3, --cabin, --sun, --rays,
+     --hands) steer each part. Defaults are the finished logo. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="ark" viewBox="0 0 200 200">
+    <defs>
+      <clipPath id="ark-hull"><path d="M65 91 Q100 103 135 91 C134 109 119 122 100 128 C81 122 66 109 65 91 Z"/></clipPath>
+      <clipPath id="ark-left"><rect x="0" y="0" width="100" height="200"/></clipPath>
+      <clipPath id="ark-right"><rect x="100" y="0" width="100" height="200"/></clipPath>
+      <clipPath id="ark-iris"><circle id="ark-iris-c" cx="100" cy="150" r="140"/></clipPath>
+      <g id="ark-hand">
+        <path d="M77 148 L77 141 C76 132 58 122 53 106 C51 96 51 88 53 85 C54.5 82 60.5 82 61.2 85.5 C61.8 92 63 98 69 104 C77 111 90 118 94 128 L95 148 Z" fill="#A96D56"/>
+        <path d="M78 148 L78 142 C77.5 136 84 130 90 128 L94 130 L95 148 Z" fill="#86533B"/>
+        <path d="M63.5 101 C69 110 78 117 87 123" fill="none" stroke="#86533B" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M77 148 L77 141 C76 132 58 122 53 106 C51 96 51 88 53 85 C54.5 82 60.5 82 61.2 85.5 C61.8 92 63 98 69 104 C77 111 90 118 94 128 L95 148" fill="none" stroke="#151515" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+      </g>
+    </defs>
+    <circle cx="100" cy="100" r="100" fill="#EDE4D9"/>
+    <g style="opacity:min(1,calc(var(--rays,1)*8))" fill="none" stroke="#151515" stroke-width="2.3" stroke-linecap="round">
+      <path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M100 45.5 V54"/>
+      <path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M85.5 48.5 L89 56"/><path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M114.5 48.5 L111 56"/>
+      <path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M73.5 55 L79.5 61.5"/><path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M126.5 55 L120.5 61.5"/>
+      <path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M66.5 66 L74.5 69.5"/><path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M133.5 66 L125.5 69.5"/>
+      <path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M63 78 L71.5 79"/><path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M137 78 L128.5 79"/>
+      <path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M64 88.5 L72 87.5"/><path pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--rays,1))" d="M136 88.5 L128 87.5"/>
+    </g>
+    <circle cx="100" cy="80" r="20.5" fill="#EC9D29" style="opacity:min(1,calc(var(--sun,1)*6));transform:translateY(calc((1 - var(--sun,1))*42px))"/>
+    <path d="M81 84 L100 69.5 L119 84 L114.5 85.5 V93 H85.5 V85.5 Z" fill="#EE675E" stroke="#151515" stroke-width="2.2" stroke-linejoin="round" style="opacity:var(--cabin,1);transform:translateY(calc((1 - var(--cabin,1))*8px))"/>
+    <g clip-path="url(#ark-hull)" style="opacity:var(--fill,1)">
+      <g clip-path="url(#ark-left)"><rect x="60" y="85" width="40" height="48" fill="#4C8C77"/>
+        <g fill="none" stroke="#63A48E" stroke-width="3.6">
+          <path style="opacity:calc(.25 + .75*var(--b1,1))" d="M60 99.5 Q100 120 100 120"/><path style="opacity:calc(.25 + .75*var(--b2,1))" d="M60 106.5 Q100 129 100 129"/><path style="opacity:calc(.25 + .75*var(--b3,1))" d="M62 114 Q100 136 100 136"/>
+        </g></g>
+      <g clip-path="url(#ark-right)"><rect x="100" y="85" width="40" height="48" fill="#4A82AC"/>
+        <g fill="none" stroke="#5A9CC5" stroke-width="3.6">
+          <path style="opacity:calc(.25 + .75*var(--b1,1))" d="M140 99.5 Q100 120 100 120"/><path style="opacity:calc(.25 + .75*var(--b2,1))" d="M140 106.5 Q100 129 100 129"/><path style="opacity:calc(.25 + .75*var(--b3,1))" d="M138 114 Q100 136 100 136"/>
+        </g></g>
+      <g fill="none" stroke="#151515" stroke-width="2.2" stroke-linecap="round">
+        <path d="M62 96 Q100 118 138 96"/><path d="M64 103 Q100 127 136 103"/><path d="M69 110 Q100 133 131 110"/>
+      </g>
+    </g>
+    <path d="M100 97 V128" stroke="#151515" stroke-width="2.2" stroke-linecap="round" fill="none" style="opacity:calc(.35 + .65*var(--fill,1))"/>
+    <path pathLength="1" d="M65 91 Q100 103 135 91 C134 109 119 122 100 128 C81 122 66 109 65 91 Z" fill="none" stroke="#151515" stroke-width="2.3" stroke-linejoin="round" style="stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--draw,1))"/>
+    <g clip-path="url(#ark-iris)">
+      <use href="#ark-hand"/>
+      <use href="#ark-hand" transform="translate(200 0) scale(-1 1)"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="folio">
+  <div class="folio__lead">
+    <a class="folio__brand" href="#top" aria-label="Asha's Ark, go to top of page">
+      <svg class="folio__logo" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#ark"/></svg>
+    </a>
+    <p class="folio__chapter" id="folio-chapter">Asha's Ark</p>
+  </div>
+  <nav class="folio__nav" aria-label="Quick links">
+    <button type="button" class="folio__motion" data-motion-toggle aria-pressed="false">Reduce motion</button>
+    <a class="folio__give" href="#give">Give</a>
+  </nav>
+</header>
+
+<svg class="mark-base" aria-hidden="true" focusable="false"></svg>
+<svg class="mark" aria-hidden="true" focusable="false" viewBox="0 0 200 200"><use href="#ark"/></svg>
+
+<main id="main">
+
+<!-- 1. Warmth -->
+<section id="top" class="act hb" data-sc-act="flow" data-chapter="Asha's Ark" aria-labelledby="hero-title">
+  <div class="hb__grid">
+    <div class="hb__text">
+      <h1 id="hero-title" class="h-xl">Building futures through education.</h1>
+      <p class="lede">Asha's Ark raises money so that children in India whose families cannot afford school supplies, uniforms, or fees can go to school.</p>
+      <p><a class="btn btn--primary" href="#give">Give</a></p>
+    </div>
+    <div class="hb__board">
+      <!-- The chalk drawing: a generated clip with no people in it. It plays once and holds on the
+           finished drawing. Under reduced motion (or without JS) the finished drawing is shown as a still. -->
+      <video class="hb__vid" id="hero-video" src="assets/video/chalk.mp4" poster="assets/video/chalk-start.jpg" muted playsinline preload="metadata" width="1280" height="720" aria-hidden="true" tabindex="-1"></video>
+      <img class="hb__still" src="assets/video/chalk-end.jpg" width="1280" height="720" alt="A chalk drawing on a classroom board of a boat carrying a small house, with a sun rising above it.">
+      <button type="button" class="hb__pause" id="hero-pause" aria-pressed="false" hidden><svg viewBox="0 0 10 10" aria-hidden="true" focusable="false"><rect x="1" y="1" width="3" height="8" fill="currentColor"/><rect x="6" y="1" width="3" height="8" fill="currentColor"/></svg><span>Pause</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Unease -->
+<section id="chapter-1" class="act ground--linen" data-sc-act="flow" data-chapter="What we saw" aria-labelledby="ch1-title">
+  <div class="plate">
+    <div class="wrap" data-sc-reveal="up" data-sc-reveal-at="0 0.2">
+      <p class="plate__num" aria-hidden="true">I.</p>
+      <h2 id="ch1-title" class="plate__title">What we saw</h2>
+    </div>
+  </div>
+  <div class="wrap spread">
+    <div class="prose" data-sc-in data-sc-stagger="70">
+      <p>My name is Niki. I started Asha's Ark with two friends, Arini and Sreekar, after trips to India to visit family. Those trips opened our eyes. We saw children who could not go to school because their families could not afford the basics: fees, a uniform, or supplies.</p>
+      <p>One thing stayed with us. A child's future was being decided by the price of a pencil or a textbook.</p>
+      <p class="pull">You already know what a pencil costs. For some families it is the cost of a future.</p>
+      <p>We realised how much we had taken for granted. A backpack, a notebook, clean clothes. For a family with very little, these small things can be the difference between a child in a classroom and a child kept home.</p>
+    </div>
+    <figure class="fig">
+      <div class="fig__frame fig__frame--tall">
+        <img data-sc-parallax="-0.5" src="assets/img/ch1.webp" width="900" height="1125" loading="lazy" alt="A young boy sits at a green wooden school desk and looks back at the camera.">
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- 3. Tenderness -->
+<section id="chapter-2" class="act ground--paper" data-sc-act="flow" data-chapter="Why &ldquo;Asha&rdquo;" aria-labelledby="ch2-title">
+  <div class="plate plate--paper">
+    <div class="wrap" data-sc-reveal="up" data-sc-reveal-at="0 0.2">
+      <p class="plate__num" aria-hidden="true">II.</p>
+      <h2 id="ch2-title" class="plate__title">Why &ldquo;Asha&rdquo;</h2>
+    </div>
+  </div>
+  <div class="wrap spread spread--flip">
+    <div class="prose" data-sc-in data-sc-stagger="70">
+      <p>We named the charity after my grandmother, Asha. In Hindi, <i lang="hi-Latn">asha</i> means hope. Her kindness is the reason it exists, and it is the standard we hold ourselves to.</p>
+      <p id="hope">Our aim is simple: remove the cost barriers that keep children out of school. Supplies, uniforms, warm clothing for winter, and school fees.</p>
+      <p>Even helping one child would be worth it. That is what keeps us going.</p>
+    </div>
+    <figure class="fig">
+      <div class="fig__frame fig__frame--wide">
+        <picture>
+          <source media="(max-width: 860px)" srcset="assets/img/ch2-m.webp">
+          <img data-sc-parallax="-0.5" src="assets/img/ch2-d.webp" width="1400" height="933" loading="lazy" alt="Schoolgirls in grey and pink uniforms sit on mats in a school courtyard. One girl laughs.">
+        </picture>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- 4. Purpose -->
+<section id="chapter-3" class="act ground--linen gifts" data-chapter="What a gift provides" aria-labelledby="ch3-title">
+  <div class="plate">
+    <div class="wrap" data-sc-act="flow">
+      <div data-sc-reveal="up" data-sc-reveal-at="0 0.35">
+        <p class="plate__num" aria-hidden="true">III.</p>
+        <h2 id="ch3-title" class="plate__title">What a gift provides</h2>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="lede gifts__intro">Every gift goes toward one of three things: school supplies, a backpack, or school fees.</p>
+
+    <div class="gift" id="gift-1" data-sc-act="flow">
+      <figure class="fig gift__fig" data-sc-reveal="left" data-sc-reveal-at="0.05 0.4">
+        <div class="fig__frame fig__frame--four3"><img src="assets/img/sp1-supplies.webp" width="1000" height="750" loading="lazy" alt="A red spiral notebook and two pens on a yellow sheet of paper."></div>
+      </figure>
+      <div class="gift__text" data-sc-in><h3>School supplies</h3><p>Notebooks, pencils, pens, and the small things a classroom asks for.</p></div>
+    </div>
+
+    <div class="gift gift--flip" id="gift-2" data-sc-act="flow">
+      <figure class="fig gift__fig" data-sc-reveal="right" data-sc-reveal-at="0.05 0.4">
+        <div class="fig__frame fig__frame--three2"><img src="assets/img/sp2-backpack.webp" width="1024" height="683" loading="lazy" alt="A canvas school backpack on a wooden desk in morning light." onerror="this.closest('.fig').classList.add('is-missing');this.remove()"></div>
+      </figure>
+      <div class="gift__text" data-sc-in><h3>A backpack</h3><p>Something to carry books in, and something that is theirs.</p></div>
+    </div>
+
+    <div class="gift" id="gift-3" data-sc-act="flow">
+      <figure class="fig gift__fig" data-sc-reveal="left" data-sc-reveal-at="0.05 0.4">
+        <div class="fig__frame fig__frame--two1"><img src="assets/img/sp3-clothing.webp" width="900" height="450" loading="lazy" alt="Folded orange knitted clothes and a handwritten sign that reads Donate Please."></div>
+      </figure>
+      <div class="gift__text" data-sc-in><h3>School fees and warm clothing</h3><p>Help with fees for a term, and warm clothing so winter is not a reason to stay home.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Lift: the peak -->
+<section id="give" class="act ground--peak" data-sc-act="pin" data-sc-span="3" data-chapter="Give" aria-labelledby="give-title">
+  <div class="peak" data-sc-stage>
+    <div class="peak__copy">
+      <h2 id="give-title" class="h-lg">Give a child a reason to walk into school.</h2>
+      <p class="lede" data-arrive="0.28">Choose a gift. Every amount goes toward supplies, a backpack, or fees for a child in India.</p>
+
+      <fieldset class="freq" data-arrive="0.36">
+        <legend>How often</legend>
+        <div class="freq__opts">
+          <input type="radio" name="freq" id="freq-once" value="once" checked><label for="freq-once">One time</label>
+          <input type="radio" name="freq" id="freq-monthly" value="monthly"><label for="freq-monthly">Monthly</label>
+        </div>
+      </fieldset>
+
+      <div class="tiers">
+        <div class="tier" data-arrive="0.44">
+          <p class="tier__amt">$15</p>
+          <h3 class="tier__name">School supplies</h3>
+          <p class="tier__desc">Notebooks, pencils, and pens for one child.</p>
+          <a class="btn btn--primary" href="#give" data-link="supplies15" data-monthly="monthly15" data-label="Give $15" data-label-monthly="Give $15 a month">Give $15</a>
+        </div>
+        <div class="tier" data-arrive="0.5">
+          <p class="tier__amt">$25</p>
+          <h3 class="tier__name">A backpack</h3>
+          <p class="tier__desc">A sturdy bag for one child's books.</p>
+          <a class="btn btn--primary" href="#give" data-link="backpack25" data-monthly="monthly25" data-label="Give $25" data-label-monthly="Give $25 a month">Give $25</a>
+        </div>
+        <div class="tier" data-arrive="0.56">
+          <p class="tier__amt">$100</p>
+          <h3 class="tier__name">School fees</h3>
+          <p class="tier__desc">Help with one child's fees for a term.</p>
+          <a class="btn btn--primary" href="#give" data-link="fees100" data-monthly="monthly100" data-label="Give $100" data-label-monthly="Give $100 a month">Give $100</a>
+        </div>
+        <div class="tier" data-arrive="0.62">
+          <p class="tier__amt tier__amt--any">Any amount</p>
+          <h3 class="tier__name">Your choice</h3>
+          <p class="tier__desc">Give what feels right.</p>
+          <a class="btn btn--primary" href="#give" data-link="custom" data-monthly="monthlyCustom" data-label="Give any amount" data-label-monthly="Give any amount monthly">Give any amount</a>
+        </div>
+      </div>
+
+      <p class="note" id="give-note" hidden>Online giving is being set up. To give now, email <a href="mailto:info@ashasark.com">info@ashasark.com</a>.</p>
+      <p class="fineprint" data-arrive="0.68">Payments are processed by Stripe. Asha's Ark does not store card details. <span data-tax-line></span></p>
+      <p class="sr-only" id="freq-live" role="status" aria-live="polite"></p>
+    </div>
+    <div class="peak__ark">
+      <div class="peak__anchor" id="peak-anchor"></div>
+      <svg class="ark ark--static" role="img" aria-label="Asha's Ark logo: two hands holding an ark beneath a rising sun." viewBox="0 0 200 200"><use href="#ark"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Trust -->
+<section id="today" class="act ground--paper today" data-sc-act="flow" data-chapter="How we work" aria-labelledby="today-title">
+  <div class="plate plate--paper">
+    <div class="wrap" data-sc-reveal="up" data-sc-reveal-at="0 0.15">
+      <p class="plate__num" aria-hidden="true">IV.</p>
+      <h2 id="today-title" class="plate__title">How Asha's Ark works</h2>
+    </div>
+  </div>
+  <div class="wrap">
+    <figure class="fig band">
+      <img src="assets/img/band.webp" width="2000" height="857" loading="lazy" alt="Four smiling girls stand close together in front of a yellow wall.">
+    </figure>
+
+    <div class="notice" data-sc-in>
+      <p>Every gift to Asha's Ark goes toward school supplies, a backpack, or school fees for a child in India. We are run by three people across three cities, not a large organisation, and we keep it that way on purpose. We do not publish inflated totals or invented impact figures: we would rather tell you plainly what a gift does than make a claim we cannot back up.</p>
+    </div>
+
+    <h3 class="sub">Three people, three cities</h3>
+    <ul class="team" data-sc-in data-sc-stagger="80">
+      <li class="person">
+        <img src="assets/team/niki.webp" width="480" height="480" loading="lazy" alt="Niki Kumar." onerror="this.onerror=null;this.src='assets/team/niki-placeholder.svg';this.alt='Placeholder for Niki Kumar’s photo.'">
+        <h4>Niki Kumar</h4><p class="person__role">Founder and Executive Director, Atlanta</p>
+        <p>Niki leads the vision and the day-to-day of Asha's Ark.</p>
+      </li>
+      <li class="person">
+        <img src="assets/team/sreekar.webp" width="480" height="480" loading="lazy" alt="Sreekar Machiraju.">
+        <h4>Sreekar Machiraju</h4><p class="person__role">Co-Founder, Washington, D.C.</p>
+        <p>Sreekar builds our network in D.C. and looks for new ways to bring people in.</p>
+      </li>
+      <li class="person">
+        <img src="assets/team/arini.webp" width="480" height="480" loading="lazy" alt="Arini Tomar.">
+        <h4>Arini Tomar</h4><p class="person__role">Co-Founder, Indianapolis</p>
+        <p>Arini organises donations in Indianapolis and makes sure supplies get where they are needed.</p>
+      </li>
+    </ul>
+
+    <h3 class="sub">Not a card person?</h3>
+    <dl class="ways" data-sc-in>
+      <div><dt>By check</dt><dd>Email <a href="mailto:info@ashasark.com">info@ashasark.com</a> and we will send details.</dd></div>
+      <div><dt>Winter clothing</dt><dd>We accept gently used winter clothing for children, sizes XS to L.</dd></div>
+      <div><dt>School supplies</dt><dd>Bookbags, calculators, lunch bags, and similar. Email us first so we can tell you where to send them.</dd></div>
+    </dl>
+
+    <h3 class="sub">Questions people ask</h3>
+    <div class="faq">
+      <details><summary>What is Asha's Ark?</summary><p>A charity that raises money to cover school supplies, uniforms, fees, and warm clothing for children in India whose families cannot afford them.</p></details>
+      <details><summary>Who will you help?</summary><p>Children from low-income families in India who are out of school, or at risk of it, because of cost.</p></details>
+      <details><summary>How will my donation be used?</summary><p>Toward school supplies, backpacks, school fees, and warm clothing for a child in India. We only publish figures we can stand behind, so you will not find invented totals on this page.</p></details>
+      <details><summary>How does the money reach India?</summary><p>We would rather give you an exact answer than a vague one. Email <a href="mailto:info@ashasark.com">info@ashasark.com</a> and we will walk you through it.</p></details>
+      <details><summary>Do you only cover school costs?</summary><p>School is the focus. We also provide warm clothing, because a cold winter should not be a reason to miss class.</p></details>
+      <details><summary>Is my gift tax deductible?</summary><p data-tax-answer>Email <a href="mailto:info@ashasark.com">info@ashasark.com</a> and we will confirm your gift's tax status.</p></details>
+      <details><summary>How else can I help?</summary><p>Give, pass this page to someone, or email us.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Resolve -->
+<section id="contact" class="act ground--linen close" data-sc-act="flow" data-chapter="Write to us" aria-labelledby="contact-title">
+  <div class="wrap close__grid">
+    <div class="close__main">
+      <h2 id="contact-title" class="h-lg">Write to us.</h2>
+      <p class="lede">Questions, ideas, or something you would like to give. We read everything.</p>
+      <p class="mailline"><a id="mail-link" href="mailto:info@ashasark.com">info@ashasark.com</a> <button type="button" class="btn btn--small" id="copy-mail">Copy address</button></p>
+      <p class="sr-only" id="copy-live" role="status" aria-live="polite"></p>
+
+      <form id="contact-form" class="form" novalidate>
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err"><p class="err" id="f-name-err" hidden></p></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-err"><p class="err" id="f-email-err" hidden></p></div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="5" required aria-describedby="f-msg-err"></textarea><p class="err" id="f-msg-err" hidden></p></div>
+        <div class="field field--check"><input id="f-terms" name="terms" type="checkbox" required aria-describedby="f-terms-err"><label for="f-terms">I have read the <a href="terms.html">Terms</a> and the <a href="privacy.html">Privacy Policy</a>.</label><p class="err" id="f-terms-err" hidden></p></div>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <button type="submit" class="btn btn--primary">Send message</button>
+      </form>
+
+      <div id="confirm" class="confirm" hidden tabindex="-1">
+        <h3>Send this message?</h3>
+        <dl><dt>Name</dt><dd id="c-name"></dd><dt>Email</dt><dd id="c-email"></dd><dt>Message</dt><dd id="c-msg"></dd></dl>
+        <p class="btns"><button type="button" class="btn btn--primary" id="c-send">Send message</button> <button type="button" class="btn" id="c-edit">Edit</button></p>
+      </div>
+      <p id="form-status" class="status" role="status" aria-live="polite" tabindex="-1"></p>
+    </div>
+    <figure class="fig close__fig">
+      <div class="fig__frame fig__frame--square"><img src="assets/img/close.webp" width="1000" height="1000" loading="lazy" alt="Five smiling schoolchildren crowd close together, looking up at the camera."></div>
+    </figure>
+  </div>
+
+  <footer class="colophon">
+    <div class="wrap">
+      <div class="logo-anchor" id="logo-anchor">
+        <svg class="ark ark--static" role="img" aria-label="Asha's Ark logo: two hands holding an ark beneath a rising sun." viewBox="0 0 200 200"><use href="#ark"/></svg>
+      </div>
+      <p><strong>Asha's Ark.</strong> Atlanta, Washington, D.C., and Indianapolis.</p>
+      <p data-tax-line></p>
+      <p>Photographs are illustrative. Classroom photos by Swastik Arora, Vaishnavi Pawar, and Loren Joseph on Unsplash; other photos from Asha's Ark.</p>
+      <p><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a> &middot; <button type="button" class="linklike" data-motion-toggle aria-pressed="false">Reduce motion</button></p>
+      <p>&copy; 2026 Asha's Ark</p>
+    </div>
+  </footer>
+</section>
+
+</main>
+
+<script src="config.js"></script>
+<script src="scrollcraft.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
