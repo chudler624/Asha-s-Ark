@@ -26,7 +26,7 @@ window.ASHA = {
      "Is my gift tax deductible?". Leave empty until the exact wording and
      registration number are confirmed. Example:
      "Asha's Ark is a registered 501(c)(3) nonprofit. EIN 00-0000000." */
-  TAX_STATUS_LINE: "",
+  TAX_STATUS_LINE: "Asha's Ark is a registered nonprofit. Donations are tax deductible to the extent allowed by law.",
 
   SITE_URL: "https://ashasark.com/"
 };
