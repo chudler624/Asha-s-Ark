@@ -126,7 +126,7 @@
     });
     $('#c-edit').addEventListener('click', function () { confirmBox.hidden = true; form.hidden = false; F.name.focus(); });
     $('#c-send').addEventListener('click', function () {
-      var email = C.CONTACT_EMAIL || 'info@ashasark.com';
+      var email = C.CONTACT_EMAIL || 'info@ashasark.org';
       if (!isSet(C.FORM_ENDPOINT)) {
         confirmBox.hidden = true; form.hidden = false;
         setStatus('This form is not connected yet, so nothing was sent. Please email ' + email + ' directly.', true);
@@ -136,7 +136,7 @@
       var hp = form.querySelector('[name="_gotcha"]');
       fetch(C.FORM_ENDPOINT, {
         method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: F.name.value.trim(), email: F.email.value.trim(), message: F.msg.value.trim(), _gotcha: hp ? hp.value : '' })
+        body: JSON.stringify({ name: F.name.value.trim(), email: F.email.value.trim(), message: F.msg.value.trim(), _gotcha: hp ? hp.value : '', _captcha: 'false' })
       }).then(function (r) {
         if (!r.ok) throw new Error('bad status');
         confirmBox.hidden = true; form.reset(); form.hidden = false;

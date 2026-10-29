@@ -115,7 +115,12 @@ p { text-wrap: pretty; }
   background: linear-gradient(180deg, var(--sal) 0%, var(--sal-deep) 100%);
   --sc-ink: var(--ink-on-sal); --sc-ink-soft: var(--ink-soft-on-sal); color: var(--sc-ink);
 }
-.ground--peak a { color: var(--ink-on-sal); }
+/* :not(.btn) matters: without it, this (0,1,1) selector outranks .btn--primary's
+   (0,1,0) color rule and repaints button text the ground's plain-link color
+   instead of --sc-accent-ink. Invisible while buttons were aria-disabled (that
+   state uses a higher-specificity attribute selector), but a real failure
+   (1.9:1, Paper-on-Marigold) the moment a tier button becomes a live link. */
+.ground--peak a:not(.btn) { color: var(--ink-on-sal); }
 .ground--peak .h-lg, .ground--peak .lede { color: var(--ink-on-sal); }
 
 /* Wide screens reserve a left margin for the ark; narrower ones put it in the head. */
